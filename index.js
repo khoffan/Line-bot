@@ -9,7 +9,14 @@ const { aiChatgpt } = require('./components/checkData');
 const port = process.env.PORT;
 
 dotenv.config()
+const crypto = require("crypto");
 
+const channelSecret = "..."; // Channel secret string
+const body = "..."; // Request body string
+const signature = crypto
+  .createHmac("SHA256", channelSecret)
+  .update(body)
+  .digest("base64");
 
 const config = {
     channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN,
