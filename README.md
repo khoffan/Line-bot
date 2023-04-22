@@ -21,3 +21,6 @@ various keys to get from here
 - rapid api kry[rapid_openai](https://rapidapi.com/openai-api-openai-api-default/api/openai80/)
 ## ngrok for make url
 download ngrok [here](https://ngrok.com)
+```bsah
+ngrok http <port>
+```
