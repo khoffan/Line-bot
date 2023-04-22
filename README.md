@@ -15,3 +15,7 @@ After installing everything, run file index.js use npm run dev
 ```bash
 npm run dev
 ```
+## KEY in .env file
+various keys to get from here 
+[linedev key](https://developers.line.biz/en/?status=success)
+[rapid_openai](https://rapidapi.com/openai-api-openai-api-default/api/openai80/)
