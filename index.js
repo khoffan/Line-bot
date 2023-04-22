@@ -9,14 +9,7 @@ const { aiChatgpt } = require('./components/checkData');
 const port = process.env.PORT;
 
 dotenv.config()
-const crypto = require("crypto");
-
-const channelSecret = "..."; // Channel secret string
-const body = "..."; // Request body string
-const signature = crypto
-  .createHmac("SHA256", channelSecret)
-  .update(body)
-  .digest("base64");
+// const crypto = require("crypto");
 
 const config = {
     channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN,
@@ -37,6 +30,12 @@ const client = new line.Client(config);
 app.post('/callback', line.middleware(config), async (req, res) => {
     try {
         const events = req.body.events;
+        // const channelSecret = process.env.CHANNEL_SECRET; // Channel secret string
+        // const body = events // Request body string
+        // const signature = crypto
+        //     .createHmac("SHA256", channelSecret)
+        //     .update(body)
+        //     .digest("base64");
         // console.log("reply ==>", events)
         // if (events.length > 0) {
         //     await Promise.all(events.map(async (event) => {
@@ -57,10 +56,10 @@ function handleEvent(event) {
         return null;
     } else if (event.type === 'message') {
         const msg = event.message.text
-        const call = (result) =>{
+        const call = (result) => {
             return client.replyMessage(event.replyToken, { type: 'text', text: result });
         }
-        aiChatgpt(msg,call)
+        aiChatgpt(msg, call)
         // console.log(msg)
         // if(Number(msg)){
         //     const number = calc.calclulated(msg)
