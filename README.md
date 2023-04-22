@@ -16,6 +16,8 @@ After installing everything, run file index.js use npm run dev
 npm run dev
 ```
 ## KEY in .env file
-various keys to get from here 
-[linedev key](https://developers.line.biz/en/?status=success)
-[rapid_openai](https://rapidapi.com/openai-api-openai-api-default/api/openai80/)
+various keys to get from here
+channel sercrat and chennell access token[linedev key](https://developers.line.biz/en/?status=success)
+rapid api kry[rapid_openai](https://rapidapi.com/openai-api-openai-api-default/api/openai80/)
+## ngrok for make url
+download ngrok [here](https://ngrok.com)
