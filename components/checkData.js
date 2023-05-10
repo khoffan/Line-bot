@@ -1,8 +1,7 @@
 const axios = require("axios");
 const dotenv = require("dotenv");
 
-dotenv.config()
-
+dotenv.config({path: '../.env'})
 
 const aiChatgpt =  (event,callback) => {
     const text = event
@@ -25,6 +24,8 @@ const aiChatgpt =  (event,callback) => {
         console.error(error);
     });
 }
+
+
 // const readline = require("readline");
 // const express = require("express");
 // const app = express()
