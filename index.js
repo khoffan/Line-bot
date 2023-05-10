@@ -16,6 +16,8 @@ const config = {
     channelSecret: process.env.CHANNEL_SECRET
 };
 
+console.log(config)
+
 
 // app.get('/', (req, res) => {
 //     res.send("Welcome");
