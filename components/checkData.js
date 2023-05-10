@@ -11,7 +11,7 @@ const aiChatgpt =  (event,callback) => {
         url: 'https://openai80.p.rapidapi.com/chat/completions',
         headers: {
             'content-type': 'application/json',
-            'X-RapidAPI-Key': process.env.KEY_RAPID,
+            'X-RapidAPI-Key': 'ae41b5ea99msh1ecd12bfa2aefeap16b035jsn3d6134450248',
             'X-RapidAPI-Host': 'openai80.p.rapidapi.com'
         },
         data: { "model": "gpt-3.5-turbo", "messages": [{ "role": "user", "content": text }] }
