@@ -6,7 +6,7 @@ const dotenv = require('dotenv');
 // const { Configuration, OpenAIApi } = require('openai');
 // const calc = require('./components/calclulate');
 const { aiChatgpt } = require('./components/checkData');
-const port = process.env.PORT;
+const port = 4000;
 
 dotenv.config()
 // const crypto = require("crypto");
